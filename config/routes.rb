@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "/" => "books#home", as: :home
   get "/books/new" => "books#newbook", as: :new_book
   post "books/create" => "books#create", as: :create_book
+  get "/books/:id" => "books#show", as: :show
 
 
 

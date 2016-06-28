@@ -1,0 +1,25 @@
+
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <div class="row">
+      <div class="show_booktitle">
+        <h2> <%= @book.title  %> <small>by <%= @book.author_id %></small></h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-2">
+        <%= image_tag @book.photo_url, size: "115x160"%>
+      </div>
+      <div class="col-xs-8">
+          <div class="well">
+              <h4>Price:  <%= number_to_currency @book.price %></h4>
+              <h4>Author:  <%= @book.author_id %></h4>
+              <%= link_to 'Update', "", class: 'btn btn-default btn-lg' %>
+              <%= link_to 'Delete', "", class: 'btn btn-default btn-lg' %>
+
+          </div>
+      </div>
+    </div>
+  </div>
+
+</div>

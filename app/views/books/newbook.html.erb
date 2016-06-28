@@ -1,0 +1,42 @@
+
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <div class="">
+    <h2 class="new_announcement">Add a new book to the Iron Library!</h2>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-xs-8 col-xs-offset-2">
+    <div class="form-group">
+      <%= form_for(@book, url: create_book_path) do |f|%>
+        <div class="row">
+          <%= f.label "Title:" %>
+          <%= f.text_field :title, class:"form-control", size: "1x2" %>
+        </div>
+        <div class="row">
+          <%= f.label :author_id %>
+          <%= f.text_field :author_id, class:"form-control", size: "1x2"  %>
+        </div>
+        <div class="row">
+          <%= f.label :price %>
+          <%= f.text_field :price, class:"form-control", size: "1x2"  %>
+        </div>
+        <div class="row">
+          <%= f.label :photo_url %>
+          <%= f.text_field :photo_url, class:"form-control", size: "1x2"  %>
+        </div>
+        <div class="row">
+          <div class="submitbutton_area">
+            <%= f.submit "Submit" %>
+            or
+            <%= link_to 'Cancel', :back %>
+          </div>
+
+        </div>
+
+      <% end %>
+
+    </div>
+  </div>
+</div>

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+
+  get "/" => "books#home", as: :home
+  get "/books/new" => "books#newbook", as: :new_book
+  post "books/create" => "books#create", as: :create_book
+  get "/books/:id" => "books#show", as: :show
+
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -27,8 +27,8 @@ class BooksController < ApplicationController
 
   def delete
     @book = Book.find_by id: params[:id]
-    @book.delete
-    redirect_to home_path
+    @book.destroy
+    redirect_to home_path, notice: "Book deleted from the db"
   end
 
   def editbook

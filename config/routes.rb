@@ -12,6 +12,10 @@ Rails.application.routes.draw do
 
   delete "/books/:id" => "books#delete", as: :delete
 
+  get "sign_in" => "sessions#new", as: :sign_in
+  post "sign_in" => "sessions#create", as: :create_sign_in
+  delete "sign_in" => "sessions#delete", as: :sign_out
+
 
 
 

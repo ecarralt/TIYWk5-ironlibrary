@@ -4,14 +4,20 @@ class CanSeeNewBookTest < Capybara::Rails::TestCase
 
   setup do
     Author.create! first_name: "George", last_name: "Orwell"
+    User.create! username: "enrique", password: "12345678"
+
   end
 
   test "can view new book" do
-    skip
+
     visit home_path
     assert_content page, "Iron" ##checking home page as well
     click_link "New Book"
+    fill_in('Username', :with => "enrique")
+    fill_in('Password', :with => "12345678")
+    click_button "Sign In"
 
+    click_link "New Book"
     fill_in('Title', :with => "Animal Farm")
     select('George Orwell', :from => "Author")
     fill_in('Price', :with => 43)

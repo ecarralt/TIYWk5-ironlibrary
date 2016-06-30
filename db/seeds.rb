@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-
+Author.delete_all
 author_names = [
   {first_name: "Geroge", last_name: "Orwell"},
   {first_name: "Aldous", last_name: "Huxley"},
@@ -24,3 +24,7 @@ author_names.each do |name|
   end
 
 end
+
+
+User.delete_all
+User.create! username: "enrique", password: "12345678"

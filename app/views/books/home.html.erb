@@ -22,7 +22,15 @@
             <%= link_to show_path(id: book.id) do%>
               <td><%= book.id %></td>
               <td><%= link_to book.title, show_path(id: book.id) %></td>
-              <td><%= book.author.full_name %></td>
+              <td>
+
+              </td>
+                    <% if false %>
+
+                    <td><%= book.author.full_name %></td>
+
+                    <% end %>
+
               <td><%= number_to_currency book.price %></td>
               <td><%= link_to "pic", book.photo_url %></td>
               <% end %>

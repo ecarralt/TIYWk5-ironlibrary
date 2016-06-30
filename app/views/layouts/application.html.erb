@@ -21,10 +21,14 @@
   </div>
   <div class="col-xs-2">
     <div class="menulinks">
-      <%= link_to "Sign-in", home_path, class: "btn btn-default" %>
+      <%= link_to "Sign-in", sign_in_path, class: "btn btn-default" %>
     </div>
   </div>
 </div>
+
+<% if notice %>
+  <p>  <%= notice %>  </p>
+<% end %>
 
 
 <%= yield %>
@@ -33,7 +37,7 @@
   <div class="row menubar_bottom">
     <div class="col-xs-2 col-xs-offset-10">
       <div class="menulinks">
-        <%= link_to "Sign-out ->", home_path %>
+        <%= link_to "Sign-out ->", sign_out_path %>
       </div>
     </div>
   </div>

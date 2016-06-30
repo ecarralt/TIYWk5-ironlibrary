@@ -1,7 +1,15 @@
 class BooksController < ApplicationController
 
+  before_action except: :home do
+    if session[:username].nil?
+      redirect_to sign_in_path, notice: "Please sign in before creating, updating, or deleting a book record"
+    end
+  end
+
+
   def home
     @books = Book.all
+    @authors = Author.all
   end
 
   def show

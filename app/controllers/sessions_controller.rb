@@ -17,7 +17,7 @@ end
 
   def delete
     session.delete :username  # session[:username] = nil (should also work)
-    redirect_to root_path, notice: "Signed Out!"
+    redirect_to home_path, notice: "Signed Out!"
   end
 
 end

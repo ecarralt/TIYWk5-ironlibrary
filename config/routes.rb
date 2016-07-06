@@ -17,6 +17,14 @@ Rails.application.routes.draw do
   delete "sign_in" => "sessions#delete", as: :sign_out
 
 
+  get "/api/books" => "api/books#index", as: :api_books
+  get "/api/books/:id" => "api/books#show", as: :api_show
+
+
+
+
+  # post "/checkouts/:book_id/:user_id" => "checkouts#create", as: :checkout
+  # delete "/checkouts/:id" =< "checkouts#delete", as: :checkin
 
 
 

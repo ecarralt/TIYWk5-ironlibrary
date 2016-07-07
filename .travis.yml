@@ -13,3 +13,5 @@ deploy:
   app: tiy-ironlibrary-ect
   on:
     repo: ecarralt/TIYWk5-ironlibrary
+  run:
+    - "rake db:migrate"

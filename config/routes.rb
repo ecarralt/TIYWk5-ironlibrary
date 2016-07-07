@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
   post "/api/checkout" => "api/checkouts#create", as: :api_checkout
   get "/api/checkout/book_id/user_id" => "api/checkout#show", as: :api_checkout_show
-  delete "/api/checkin" =< "api/checkouts#delete", as: :api_checkin_book
+  delete "/api/checkin" => "api/checkouts#delete", as: :api_checkin_book
 
 
 

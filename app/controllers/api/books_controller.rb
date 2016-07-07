@@ -11,13 +11,13 @@ class Api::BooksController < ApplicationController
   def index
     @books = Book.all
     @authors = Author.all
-    render json: @books
+    # render json: @books
   end
 
   def show
     @book = Book.find_by id: params[:id]
 
-    render json: @book
+    # render json: @book
   end
 
 

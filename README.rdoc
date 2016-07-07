@@ -1,3 +1,109 @@
+Iron Library APIs
+===================
+
+1. Show list of books
+
+
+GET '/api/books/'
+
+output format:
+
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "A Clockwork Orange",
+      "price": "$33.00",
+      "photo_url": "https://upload.wikimedia.org/wikipedia/en/2/23/Clockwork_orange.jpg",
+      "status": "available",
+      "url": "http://localhost:3000/api/books/1",
+      "author": {
+        "id": 4,
+        "first_name": "Anthony",
+        "last_name": "Burgees"
+      }
+    },
+    {
+      "id": 2,
+      "title": "Brave New World",
+      "price": "$44.00",
+      "photo_url": "http://t2.gstatic.com/images?q=tbn:ANd9GcRJi53V3AjTNrRKw0671gh9beveuwzSy4Wdr8jr8XUhHDH0zSRF",
+      "status": "available",
+      "url": "http://localhost:3000/api/books/2",
+      "author": {
+        "id": 2,
+        "first_name": "Aldous",
+        "last_name": "Huxley"
+      }
+    }
+  ]
+}
+
+
+
+2. Show specific book detail
+
+GET '/api/books/:id'
+
+output format:
+
+{
+  "book": {
+    "id": 2,
+    "title": "Brave New World",
+    "price": "$44.00",
+    "photo_url": "http://t2.gstatic.com/images?q=tbn:ANd9GcRJi53V3AjTNrRKw0671gh9beveuwzSy4Wdr8jr8XUhHDH0zSRF",
+    "status": "available",
+    "url": "http://localhost:3000/api/books/2",
+    "author": {
+      "id": 2,
+      "first_name": "Aldous",
+      "last_name": "Huxley"
+    }
+  }
+}
+
+
+3. Check-out a book
+
+POST `/api/checkout`
+
+```
+  params = {
+    checkout: {
+      book_id: #,
+      username: "",
+    }
+  }
+
+```
+
+
+4. Check-in a book
+
+DELETE `/api/checkin`
+
+```
+  params = {
+    checkout: {
+      book_id: "",
+      username: "",
+    }
+  }
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
 == README
 
 This README would normally document whatever steps are necessary to get the

@@ -11,3 +11,9 @@ json.book do
     json.last_name @book.author.last_name
   end
 end
+
+
+json.user do
+  json.id @user.id
+  json.username @user.username
+end

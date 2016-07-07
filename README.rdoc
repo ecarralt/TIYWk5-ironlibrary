@@ -66,10 +66,18 @@ output format:
 
 3. Check-out a book
 
-POST `/api/checkout`
+POST `/api/checkouts/create`
 
 ```
   params = {
+    checkout: {
+      book_id: #,
+      username: "",
+    }
+  }
+
+  JSON:
+  {
     checkout: {
       book_id: #,
       username: "",
@@ -81,12 +89,20 @@ POST `/api/checkout`
 
 4. Check-in a book
 
-DELETE `/api/checkin`
+DELETE `/api/checkouts/delete`
 
 ```
   params = {
     checkout: {
       book_id: "",
+      username: "",
+    }
+  }
+
+  JSON:
+  {
+    checkout: {
+      book_id: #,
       username: "",
     }
   }

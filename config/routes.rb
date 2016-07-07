@@ -20,9 +20,9 @@ Rails.application.routes.draw do
   get "/api/books" => "api/books#index", as: :api_books
   get "/api/books/:id" => "api/books#show", as: :api_book
 
-  post "/api/checkout" => "api/checkouts#create", as: :api_checkout
-  get "/api/checkout/book_id/user_id" => "api/checkout#show", as: :api_checkout_show
-  delete "/api/checkin" => "api/checkouts#delete", as: :api_checkin_book
+  post "/api/checkouts/create" => "api/checkouts#create", as: :api_checkout
+  get "/api/checkouts/:book_id/:user_id" => "api/checkouts#show", as: :api_checkout_show
+  delete "/api/checkouts/delete" => "api/checkouts#delete", as: :api_checkin
 
 
 

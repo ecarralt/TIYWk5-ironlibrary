@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20160706225918) do
     t.string   "status",     default: "available"
   end
 
-  create_table "user_books", force: :cascade do |t|
+  create_table "checkouts", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "book_id"
     t.datetime "created_at"

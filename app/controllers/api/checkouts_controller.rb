@@ -29,7 +29,7 @@ def create
     render :show# json: {message: "successfully checked-out:"}
     # redirect_to api_checkout_show_path(book_id: @checkout.book_id, user_id: @checkout.user_id), status: 201 #created
     else
-    render json: {errors: "Sorry, unable to save checkout"}, status: 500 #servererror
+    render json: {errors: "Sorry, unable to save checkout"}, status: 422 #servererror
     end
 
   else
